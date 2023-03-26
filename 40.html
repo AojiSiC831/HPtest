@@ -100,14 +100,26 @@
 
 
 <form action="https://www.google.com/search" method="get">
-	<input type="hidden" name="cx" value="YOUR_SEARCH_ENGINE_ID">
-	<input type="hidden" name="ie" value="UTF-8">
-	<input type="text" name="q" placeholder="サイト内検索" required>
-	<button type="submit">検索</button>
-  </form>
-  
-  <script async src="https://cse.google.com/cse.js?cx=95943db75329846cc"></script>
-  <div class="gcse-search"></div>
+  <input type="hidden" name="cx" value="YOUR_SEARCH_ENGINE_ID">
+  <input type="hidden" name="ie" value="UTF-8">
+  <input type="text" name="q" placeholder="サイト内検索" required>
+  <button type="submit">検索</button>
+</form>
+
+<script>
+  (function() {
+    var cx = '95943db75329846cc'; // YOUR_SEARCH_ENGINE_ID
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<gcse:search></gcse:search>
+
   
 
 
@@ -238,7 +250,7 @@
       /* ボタンのスタイルを定義 */
       button {
         background-color:  #0984e3; /* ボタンの背景色を指定 */
-        color: black; /* ボタンの文字色を指定 */
+        color: white; /* ボタンの文字色を指定 */
         padding: 20px 40px; /* ボタンの余白を指定 */
         border: none; /* ボタンの枠線をなくす */
         border-radius: 5px; /* ボタンの角を丸める */
