@@ -96,6 +96,31 @@
   
   }
 </style>
+		
+		
+		<button class="collapsible">クリックして展開</button>
+<div class="content">
+  <p></p>
+</div>
+
+<script>
+  // 折り畳み可能な要素を取得
+  var coll = document.getElementsByClassName("collapsible");
+
+  // 各要素をループして、クリックされたら展開/折り畳みするようにする
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
 
 <section>
   <h2>「VESTA」で可視化することができるX線構造解析データや、物質構造のWeb3Dを公開しています。<br>
